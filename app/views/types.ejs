@@ -1,0 +1,15 @@
+<%- include('partials/header'); -%>
+
+<h2 class="PageTitle">Cliquez sur un type pour voir tous les Pokémon de ce type</h2>
+
+<div class="pokemonTypeList">
+
+    <%for (const type of types) {%>
+    
+        <a href="/type/<%=type.id%>" class="pokemonType type--<%=type.name.toLowerCase()%>"><%=type.name%></a>
+
+    <%}%>
+
+</div>
+
+<%- include('partials/footer'); -%>

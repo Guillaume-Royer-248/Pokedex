@@ -1,0 +1,297 @@
+body{
+    background-color: #c14040;
+    font-family: 'Bree Serif', serif;
+}
+
+.header{
+    position: sticky;
+    top : 0px;
+    background-color: #c14040;
+    padding : 20px;
+    margin:15px;
+
+}
+
+.title{
+    display: flex;
+    align-content: center;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    border-radius: 15px;
+    /* margin: 15px; */
+    padding: 5px;
+    text-transform: capitalize;
+}
+
+.mainTitle{
+    margin: 15px;
+    font-size: 2rem;
+}
+
+.navList{
+    display: flex;
+    margin: 15px;
+    
+}
+
+.navList_item{
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 1.3rem;
+}
+
+.navList_link, .maintilte_link{
+    text-decoration: none;
+    color: #c14040;
+    
+}
+
+.mainList{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.pokemonCard{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #982c2c;
+    border-radius: 20px;
+    margin:10px;
+    padding: 10px;
+}
+
+.pokemon_title{
+    color: #f9d3d3;
+    font-size: 1.5rem;
+    margin: 5px;
+    text-transform: capitalize;
+}
+.pokemon_name{
+    margin-left: 5px;
+     
+}
+
+.pokemon_img{
+    margin: 10px;
+}
+
+.PageTitle{
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+    text-align: center;
+    padding:15px;
+    margin-bottom: 20px;
+}
+
+.imgAndCaract{
+    display: flex;
+    align-content: center;
+    justify-content: center;
+}
+
+.imageZone{
+    position: relative;
+    display: flex;
+    box-sizing: border-box;
+    align-content: center;
+    justify-content: center;
+    width: 30%;
+    margin:0 10px;
+}
+
+.imageZone__background{
+    position: absolute;
+    top : calc(50% - 250px);
+    left: calc(50% - 250px);
+    width: 500px;
+    height: 500px;
+    z-index: 0;
+    background-color: #ab3838;
+    border-radius: 10px;
+}
+
+.imageZone__image{
+    position: absolute;
+    top : 0;
+    left: 0;
+    z-index: 1;
+    top : calc(50% - 200px);
+    left: calc(50% - 200px);
+    width: 400px;
+    height: 400px;
+}
+
+.caracZone{
+    width:70%;
+    margin:0 30px;
+    background-color: #ab3838;
+    border-radius: 10px;
+    padding:40px;   
+}
+
+.caracZone_title{
+    margin :10px;
+    padding-top: 15px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.pokemonTypeZone{
+    display: flex;
+    margin: 20px 0;
+}
+
+.pokemonType{
+    font-size: 1.2rem;   
+    color: white;
+    background-color: lightgrey;   
+    border-radius: 5px;
+    width: 230px;
+    padding: 15px;
+    text-decoration: none;
+    text-align: center;
+    margin : 5px;
+}
+
+.type--plante{
+    background-color: #77cc55;
+}
+.type--poison{
+    background-color: #aa5599;
+}
+.type--acier{
+    background-color: #AAAABB;
+}
+.type--combat{
+    background-color: #BB5544;
+}
+.type--dragon{
+    background-color: #7766EE;
+}
+.type--eau{
+    background-color: #3399FF;
+}
+.type--electrik{
+    background-color: #FFBB33;
+}
+.type--feu{
+    background-color: #FF4422;
+}
+.type--glace{
+    background-color: #77DDFF;
+}
+.type--insecte{
+    background-color: #AABB22;
+}
+.type--normal{
+    background-color: #BBAABB;
+}
+.type--psy{
+    background-color: #FF5599;
+}
+.type--roche{
+    background-color: #BBAA66;
+}
+.type--sol{
+    background-color: #DDBB55;
+}
+.type--spectre{
+    background-color: #6666BB;
+}
+.type--tenebres{
+    background-color: #665544;
+}
+.type--vol{
+    background-color: #6699FF;
+}
+
+
+
+
+.statistiques{
+    color: white;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.caracDetailZone{
+    display: flex;
+    flex-direction: column;
+    margin:15px 0;
+}
+
+.caracDetailLine{
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-content: center;
+    align-items: center;
+    margin: 5px 0;
+    color: white;
+    font-weight: bold;
+}
+
+.caracName{
+    width: 15%;
+    font-size: 1.3rem;
+}
+
+.caracValue{
+    width: 5%;
+    font-size: 1.3rem;
+}
+.progressBar{
+    position : relative;
+    width: 80%;
+    height: 40px;
+}
+
+.progressBar_background{
+    position: absolute;
+    z-index: 0;
+    top :0;
+    left:0;
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+    background-color: #632B2B;
+    
+}
+
+.prgressBar_progretion{
+    position: absolute;
+    z-index: 1;
+    top :0;
+    left:0;
+    height: 100%;
+    border-radius: 10px 0 0 10px;
+    background-color: white;   
+}
+
+.backToListButton{
+    display: block;
+    margin: 40px auto;
+    width: 10%;
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+    padding:15px;
+    text-decoration: none;
+}
+
+.pokemonTypeList{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 0 auto;
+    flex-wrap: wrap;
+    width: 90%;
+    align-content: center;
+}
+

@@ -1,0 +1,77 @@
+<%- include('partials/header'); -%>
+
+<h2 class="PageTitle">Détail de <span class="PageTitle_pokemonName"> <%= pokemon[0].nom %></span></h2>
+        <div class="imgAndCaract">
+            <div class="imageZone">
+                <div class="imageZone__background"></div>
+                <img src="../img/<%= pokemon[0].numero %>.png" alt="Photo de <%= pokemon[0].nom %>" class="imageZone__image">
+            </div>
+            <div class="caracZone">
+                <h3 class="caracZone_title">#<%= pokemon[0].numero %> <span class="caracZone_PokemonName"><%= pokemon[0].nom %></span> </h3>
+                <div class="pokemonTypeZone">
+                    
+                <% for (const pok of pokemon) {%>
+                    <a href="/type/<%=pok.id%>" class="pokemonType type--<%=pok.name.toLowerCase()%>"><%=pok.name%></a>
+                <%}%>
+                
+                </div>
+                <p class="statistiques">Statistiques</p>
+                <div class="caracDetailZone">
+                    <div class="caracDetailLine">
+                        <p class="caracName">PV</p>
+                        <p class="caracValue"><%= pokemon[0].pv %></p>
+                        <div class="progressBar">
+                            <div class="progressBar_background"></div>
+                            <div class="prgressBar_progretion" style="width : <%= Math.floor(Number(pokemon[0].pv/255*100)) %>%"></div>
+                        </div>
+                    </div>
+                    <div class="caracDetailLine">
+                        <p class="caracName">Attaque</p>
+                        <p class="caracValue"><%= pokemon[0].attaque %></p>
+                        <div class="progressBar">
+                            <div class="progressBar_background"></div>
+                            <div class="prgressBar_progretion" style="width : <%= Math.floor(Number(pokemon[0].attaque/255*100)) %>%"></div>
+                        </div>
+                    </div>
+                    <div class="caracDetailLine">
+                        <p class="caracName">Défense</p>
+                        <p class="caracValue"><%= pokemon[0].defense %></p>
+                        <div class="progressBar">
+                            <div class="progressBar_background"></div>
+                            <div class="prgressBar_progretion" style="width : <%= Math.floor(Number(pokemon[0].defense/255*100)) %>%"></div>
+                        </div>
+                    </div>
+                    <div class="caracDetailLine">
+                        <p class="caracName">Attaque Spé.</p>
+                        <p class="caracValue"><%= pokemon[0].attaque_spe %></p>
+                        <div class="progressBar">
+                            <div class="progressBar_background"></div>
+                            <div class="prgressBar_progretion" style="width : <%= Math.floor(Number(pokemon[0].attaque_spe/255*100)) %>%"></div>
+                        </div>
+                    </div>
+                    <div class="caracDetailLine">
+                        <p class="caracName">Défense Spé.</p>
+                        <p class="caracValue"><%= pokemon[0].defense_spe %></p>
+                        <div class="progressBar">
+                            <div class="progressBar_background"></div>
+                            <div class="prgressBar_progretion" style="width : <%= Math.floor(Number(pokemon[0].defense_spe/255*100)) %>%"></div>
+                        </div>
+                    </div>
+                    <div class="caracDetailLine">
+                        <p class="caracName">Vitesse</p>
+                        <p class="caracValue"><%= pokemon[0].vitesse %></p>
+                        <div class="progressBar">
+                            <div class="progressBar_background"></div>
+                            <div class="prgressBar_progretion" style="width : <%= Math.floor(Number(pokemon[0].vitesse/255*100)) %>%"></div>
+                        </div>
+                    </div>
+                    
+                </div>
+                
+            </div>
+            
+        </div>
+
+        <a href="/" class="backToListButton">Revenir à la liste</a>
+
+<%- include('partials/footer'); -%>
